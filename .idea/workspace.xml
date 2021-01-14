@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ba8062e9-d0b9-41b7-ac6c-f7e20d2dce12" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="JupyterTrust" id="f2e59dea-ca5d-4c32-a22f-2a5926203eb0" />
+  <component name="ProjectId" id="1n0pQ0nd2z3d4MdlkLFA8xuEelS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ba8062e9-d0b9-41b7-ac6c-f7e20d2dce12" name="Default Changelist" comment="" />
+      <created>1610536847918</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610536847918</updated>
+      <workItem from="1610536849555" duration="27000" />
+      <workItem from="1610538737606" duration="183000" />
+      <workItem from="1610538984396" duration="3015000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="173" y="167" key="FileChooserDialogImpl" timestamp="1610539618551">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="173" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1610539618551" />
+    <state x="0" y="57" width="914" height="710" key="SettingsEditor" timestamp="1610539635759">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="0" y="57" width="914" height="710" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1610539635759" />
+  </component>
+</project>
