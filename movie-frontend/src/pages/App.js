@@ -1,27 +1,27 @@
-
-import './App.css';
-import React, {useState} from 'react';
+import "./App.css";
+import React from "react";
 import {Component} from 'react';
-import {Radio} from 'antd';
-import FirstQuestion from '../components/FirstQuestion';
-import SecondQuestion from '../components/SecondQuestion';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'; 
-
-
+import {BrowserRouter as Router, Switch, Link, Route} from "react-router-dom"; 
+import SecondQuestion from "./SecondQuestion";
+import FirstQuestion from "./FirstQuestion";
+import ThirdQuestion from "./ThirdQuestion";
 class App extends React.Component {
-  constructor(props){   // render()보다 먼저 실행하여 초기화를 담당한다.
-    super(props);
-  }
   render(){
-    return (
-      <div className="App">
-       <div className="black-nav">
-         <div style={{color:"white",fontSize:'30px'}}>영화 장르 추천</div>
-       </div>
-       <FirstQuestion/> 
-      </div>
+    return(
+        <div className="App">
+         <div className="black-nav">
+          <div style={{color:"white",fontSize:'30px'}}>영화 장르 추천</div>
+         </div>
+         <Router>
+           <Switch>
+            <Route exact path="/" component = {FirstQuestion}/>
+            <Route exact path="/SecondQuestion" component ={SecondQuestion} />
+            <Route exact path="/ThirdQuestion" component ={ThirdQuestion} />
+           </Switch>
+         </Router>
+        </div>
     );
-  }  
+  }
 }
 
 export default App;
