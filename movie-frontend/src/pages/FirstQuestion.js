@@ -1,38 +1,37 @@
 import React from 'react';
-import '../pages/App.css'; 
+import './App.css'; 
 import {Radio} from 'antd';
-import {Link, Route, BrowserRouter as Router, BrowserRouter} from "react-router-dom"
+import {Link, BrowserRouter as Router, BrowserRouter} from "react-router-dom"
 
 
 
 class FirstQuestion extends React.Component {
     constructor(props){
-        super(props); 
-        this.onChange =this.onChange.bind(this);
-        this.state = {
-            firstAns: 0
+        super(props);
+        this.onChangeAns = this.onChangeAns.bind(this);
+        this.state ={
+            answer : 0
         }
     }
- 
-    onChange = (e)=> {
-        this.setState({firstAns : e.target.value});
-        console.log('First Answer', this.state.firstAns);
-    };
+
+    onChangeAns = (e)=>{
+        this.setState({answer:e.target.value})
+        console.log("Answer : ",this.state.answer);
+        this.props.onChange(e.target.value,1);
+    }
 
     render(){
-       
-        const firstAns = this.state.firstAns;
         return(
-            
             <div>
                 <h1>당신의 현재 기분은 어떤가요?</h1>
-                <Radio.Group onChange={this.onChange} value ={firstAns}>
+                <Radio.Group onChange={this.onChangeAns} value={this.state.answer}>
                    <Radio value={1}>기쁨</Radio>
                    <Radio value={2}>그냥</Radio>
                    <Radio value={3}>슬픔</Radio>
                 </Radio.Group>
-                <Link to= '/SecondQuestion'><button> 다음</button></Link>
-                
+                {
+                this.props.firstAns !== 0 && <Link to= '/SecondQuestion'><button> 다음</button></Link>
+                }
 
             </div>
         );

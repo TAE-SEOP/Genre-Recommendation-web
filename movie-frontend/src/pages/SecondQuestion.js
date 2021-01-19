@@ -1,19 +1,20 @@
 import React from 'react';
-import '../pages/App.css'; 
+import './App.css'; 
 import {Link, Route, BrowserRouter as Router, BrowserRouter} from "react-router-dom"
 import {Radio} from 'antd';
 
 class SecondQuestion extends React.Component{
     constructor(props){
         super(props);
-        this.onChange = this.onChange.bind(this);
         this.state = {
-            secondAns: 0
+            answer: 0
         }
     }     
-    onChange = (e)=> {
-        this.setState({secondAns : e.target.value});
+    onChangeAns = (e)=> {
+        this.setState({answer : e.target.value});
+        this.props.onChange(e.target.value,2);
         console.log('Second Answer', this.state.secondAns);
+
     };
     render(){
     
@@ -21,12 +22,14 @@ class SecondQuestion extends React.Component{
         return(
             <div>
                 <h1>조금 더 구체적으로?</h1>
-                <Radio.Group onChange={this.onChange} value = {secondAns} >
+                <Radio.Group onChange={this.onChangeAns} value = {this.state.answer} >
                    <Radio value={4}>신남</Radio>
                    <Radio value={5}>편안함</Radio>
                    <Radio value={6}>괴롭다</Radio>
                 </Radio.Group>
-                <Link to= '/ThirdQuestion'><button> 다음</button></Link>
+                {
+                this.props.secondAns != 0 && <Link to= '/ThirdQuestion'><button> 다음</button></Link>
+                }
             </div>
         );
 
