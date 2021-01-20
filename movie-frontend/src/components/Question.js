@@ -45,7 +45,7 @@ class Question extends React.Component{
          <Router>
            <Switch>
             <Route exact path="/" render={()=> <FirstQuestion firstAns = {this.state.firstAns} onChange = {this.onChangeFirst}/>}/>
-            <Route exact path="/SecondQuestion" render={()=><SecondQuestion secondAns={this.state.secondAns} onChange ={this.onChangeFirst}/> }/>
+            <Route exact path="/SecondQuestion" render={()=><SecondQuestion firstAns = {this.state.firstAns} secondAns={this.state.secondAns} onChange ={this.onChangeFirst}/> }/>
             <Route exact path="/ThirdQuestion" render={()=><ThirdQuestion thirdAns={this.state.thirdAns} onChange={this.onChangeFirst}/>} />
            </Switch>
          </Router>
