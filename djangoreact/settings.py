@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import my_setting
 from pathlib import Path
 import os
 
@@ -21,7 +21,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '&2aix2-+06$k%34d!q1vvcy-5$+5mnf7t%ao%#msvbe73yk6v_'
+# SECRET_KEY = '&2aix2-+06$k%34d!q1vvcy-5$+5mnf7t%ao%#msvbe73yk6v_'
+SECRET_KEY =  my_setting.SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -93,10 +94,24 @@ WSGI_APPLICATION = 'djangoreact.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': 'django_movie',
+#         'USER': 'taeseop',
+#         'PASSWORD': '201620896',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#         'OPTIONS': {
+#             'init_command': 'SET sql_mode="STRICT_TRANS_TABLES"'
+#         }
+#     }
+# }
+DATABASES = my_setting.DATABASES
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
