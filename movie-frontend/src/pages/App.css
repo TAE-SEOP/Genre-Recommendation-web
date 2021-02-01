@@ -1,20 +1,102 @@
-.App {
+.App{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.black-nav{
+  background: #FFFFFF;
+  width: 100%;
+  display: center;
+  padding: 20px;
+  left: 0px;
+  top:8px;
+  width:1597px;
+  height: 100px;
 }
 
-.black-nav{
-  background: black;
+.taeseop {
+  width: 30%;
+  height: 145px; 
+  overflow: hidden;
+  float:left;
+  margin:20px;
+}
+
+.img2 {
   width: 100%;
-  display: left;
-  color: white;
-  padding: 20px;
-  font-weight: 600;
+  height: 100%;
+  object-fit: cover;
+}
+
+.introduce{
+  display:block;
+}
+
+.introduce::after{
+  content:"";
+  display:table;
+  clear:both
+}
+
+.taeseop_t {
+  width:60%;
+  float:left;
+  height: 145px; 
+}
+
+.taeseop_i{
+  color: #789467;
+  font-size: 15px;
+  display:block;
+  margin-bottom: 20px;
+}
+
+.taeseop_i::after{
+  content:"";
+  display:table;
+  clear:both;
+}
+
+.img {
+  width: 90.5%;
+  height: 90.5%;
+  object-fit: cover;
+  display: block;
+  padding :10px;
+  margin:0px auto;
+  border-radius: 20px;
+}
+
+.img_heart{
+  width: 500px;
+  height: 500px;
+}
+
+.question{
+  left: 676px;
+  top: 680px;
+}
+
+.result{
+  margin-top: 30px;
+  left: 676px;
+  top: 380px;
   font-size: 20px;
+  text-align: center;
+}
+
+.imgfile{
+  float:left;
+  width: 33%;
+  height: 282px;
+  border-radius: 20px;
+  border: 1px solid #CFCFCF;
+}
+
+
+.imgfile::after{
+  content:"";
+  display:table;
+  clear:both
 }
 
 

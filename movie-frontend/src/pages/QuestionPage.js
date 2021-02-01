@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link, Route, BrowserRouter as Router, BrowserRouter} from "react-router-dom"
 import {Radio} from 'antd';
+import {Button} from 'react-bootstrap'
+
 
 class QuestionPage extends React.Component{
     constructor(props){
@@ -10,7 +12,7 @@ class QuestionPage extends React.Component{
     this.state={
         answer : 0,
         nextpage :['/','/Question-2','/Question-3','/Question-4','/Question-5','/Question-6',
-        '/Question-7','/Question-8','/Question-9','/Question-10','/Question-11','/Question-12',]
+        '/Question-7','/Question-8','/Question-9','/Question-10','/Question-11','/Question-12','/Result']
         }
         
     }
@@ -60,26 +62,35 @@ class QuestionPage extends React.Component{
             var sliceemotion = this.sliceEmotion(this.props.firstAns,EmotionList);
         }
             const secondAns = this.state.secondAns;
-
-        return(
-            <div>
-                <h1>{this.props.questionArray.question} </h1>
-                {
-                    this.props.questionArray.id != 2 &&
-                    <Radio.Group onChange={this.onChangeAns} value = {this.state.answer} >
-                        {this.props.choiceList.map((m,index)=>(<Radio value={index+1} key ={index}> {m} </Radio>))}
-                    </Radio.Group>
-                } 
-                {
-                    this.props.questionArray.id === 2 &&
-                    <Radio.Group onChange={this.onChangeAns} value = {this.state.answer} >
-                        {sliceemotion.map((m,index)=>(<Radio value={m.id} key ={index}> {m.emotion} </Radio>))}
-                    </Radio.Group>
-                }      
-                {
-                this.props.answer !== 0 && <Link to= {this.state.nextpage[this.props.questionArray.id]}><button onClick = {()=>this.setState({answer : 0})}> 다음</button></Link>
-                }
-            </div>
+            const buttonStyle={
+                width:400,
+                height:100,
+                margin:20, 
+                fontSize:15,
+                borderRadius: 20
+            }
+            return(
+                <div className="question">
+                    <p style={{fontSize:"20px"}}>Question {this.props.questionArray.id}.</p>
+                    <p><strong>{this.props.questionArray.question}</strong> </p>
+                    {
+                        this.props.questionArray.id !== 2 &&
+                        <Link to= {this.state.nextpage[this.props.questionArray.id]}>
+                            <Radio.Group>
+                                {this.props.choiceList.map((m,index)=>(<div><Button variant ="outline-danger" style={buttonStyle} onClick={this.onChangeAns}  value = {index+1}  key ={index}> {m} </Button></div>))}
+                            </Radio.Group>
+                        </Link>
+                    } 
+                    {
+                        this.props.questionArray.id == 2 &&
+                        <Link to= {this.state.nextpage[this.props.questionArray.id]}>
+                            <Radio.Group>
+                                {sliceemotion.map((m,index)=>(<div><Button variant ="outline-danger" style={buttonStyle} value={m.id} onClick={this.onChangeAns} key ={index}> {m.emotion} </Button></div>))}
+                            </Radio.Group>
+                        </Link>
+                    }      
+                      
+                </div>
         );
     }
 }

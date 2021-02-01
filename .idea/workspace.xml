@@ -23,12 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba8062e9-d0b9-41b7-ac6c-f7e20d2dce12" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/my_setting.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoreact/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoreact/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-frontend/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/movie-frontend/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-frontend/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/movie-frontend/debug.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +59,12 @@
       <workItem from="1610538737606" duration="183000" />
       <workItem from="1610538984396" duration="3015000" />
       <workItem from="1611795492601" duration="248000" />
-      <workItem from="1611810867703" duration="4007000" />
+      <workItem from="1611810867703" duration="5166000" />
+      <workItem from="1611907496930" duration="54000" />
+      <workItem from="1611982523553" duration="186000" />
+      <workItem from="1612090389489" duration="678000" />
+      <workItem from="1612154070306" duration="1216000" />
+      <workItem from="1612178580979" duration="147000" />
     </task>
     <servers />
   </component>

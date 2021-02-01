@@ -7,7 +7,8 @@ import {BrowserRouter as Router, Switch, Link, Route} from "react-router-dom";
 // import SecondQuestion from '../pages/SecondQuestion';
 // import ThirdQuestion from '../pages/ThirdQuestion';
 import QuestionPage from '../pages/QuestionPage';
-
+import Home from './Home';
+import Result from './Result';
 
 class Question extends React.Component{
     constructor(props){
@@ -64,15 +65,14 @@ class Question extends React.Component{
     render(){
         return(
             <div>
-                  <div className="black-nav">
-          <div style={{color:"white",fontSize:'30px'}}>영화 장르 추천</div>
-         </div>
          <Router>
            <Switch>
             {/* <Route exact path="/" render={()=> <FirstQuestion firstAns = {this.state.userAnswer[0].result} onChange = {this.onChange}/>}/>
             <Route exact path="/SecondQuestion" render={()=><SecondQuestion firstAns = {this.state.userAnswer[0].result} secondAns={this.state.userAnswer[1].result} onChange ={this.onChange}/> }/>
             <Route exact path="/ThirdQuestion" render={()=><ThirdQuestion thirdAns={this.state.userAnswer[2].result} onChange={this.onChange}/>} /> */}
-            <Route exact path='/' render={()=> <QuestionPage  questionArray = {this.state.questionArray[0]} answer = {this.state.userAnswer[0].result} choiceList = {this.state.selectList[0].choice} onChange = {this.onChange}/>}/>
+            <Route exact path='/' render={()=> <Home/>}/>
+            <Route exact path='/Result' render={()=> <Result/>}/>
+            <Route exact path='/Question' render={()=> <QuestionPage  questionArray = {this.state.questionArray[0]} answer = {this.state.userAnswer[0].result} choiceList = {this.state.selectList[0].choice} onChange = {this.onChange}/>}/>
             <Route exact path='/Question-2' render={()=> <QuestionPage questionArray = {this.state.questionArray[1]} firstAns = {this.state.userAnswer[0].result} answer={this.state.userAnswer[1].result} onChange = {this.onChange}/>}/>
             <Route exact path='/Question-3' render={()=> <QuestionPage questionArray = {this.state.questionArray[2]} answer = {this.state.userAnswer[2].result} choiceList = {this.state.selectList[1].choice} onChange = {this.onChange}/>}/>
             <Route exact path='/Question-4' render={()=> <QuestionPage questionArray = {this.state.questionArray[3]} answer = {this.state.userAnswer[3].result} choiceList = {this.state.selectList[2].choice} onChange = {this.onChange}/>}/>
