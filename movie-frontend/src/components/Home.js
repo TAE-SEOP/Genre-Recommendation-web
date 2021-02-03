@@ -4,22 +4,23 @@ import {NavLink} from "react-router-dom";
 import Button from 'react-bootstrap/Button'
 
 import imgfile0 from "../images/home.png"
-
+import imgfile4 from "../images/GettyImages-a105092271.png"
 class Home extends React.Component {
   render(){
     return(
       <>
+      <div className="App">
         <div style={{marginTop:"50px", display:"block"}}>
             <img src={imgfile0} style={{width:"700px", height:"500px", marginBottom:"30px", borderRadius: "20px"}}></img>
             <br/>
-            <p style={{fontSize:"15px"}}>이 테스트는 자신의 <strong>장르 선호도와 오늘 감정</strong> 등과 같이<br/> 사용자의 취향을 확인하고 찾아내 <strong>영화 장르 추천</strong>을 해주는 테스트입니다. </p>
+            <p style={{fontSize:"15px"}}>이 테스트는 자신의 <strong>장르 선호도</strong>와<strong> 현재 감정</strong>을<br/> 몇 가지 질문을 통해 알아내어 <strong>영화 장르를 추천</strong>해주는 테스트입니다. </p>
             <p style={{fontSize:"15px"}}>총 12문항 구성으로 <strong>5분정도</strong> 소요됩니다.</p>
             <NavLink to ={{
                   pathname: "/Question"
               }}>
                 <Button style={{width:"200px"}} variant="outline-danger">분석 시작</Button>
             </NavLink>
-    
+            </div>
         </div>
 
         {/* <div>

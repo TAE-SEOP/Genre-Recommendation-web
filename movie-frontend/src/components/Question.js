@@ -64,7 +64,7 @@ class Question extends React.Component{
 
     render(){
         return(
-            <div>
+            <div className="App">
          <Router>
            <Switch>
             {/* <Route exact path="/" render={()=> <FirstQuestion firstAns = {this.state.userAnswer[0].result} onChange = {this.onChange}/>}/>
