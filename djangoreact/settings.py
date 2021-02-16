@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'api',
     'rest_framework',
     'corsheaders',
-    'post', 
+    'post'
 ]
 
 MIDDLEWARE = [
@@ -57,7 +57,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_WHITLIST =[
-    'http://127.0.0.1:8000',
+    # 'http://127.0.0.1:8000',
     'http://localhost:3000'
 ]
 CORS_ALLOW_CREDENTIALS = True
@@ -82,9 +82,9 @@ TEMPLATES = [
     },
 ]
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'movie-frontend','build','static'),
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'movie-frontend','build','static'),
+# ]
 
 WSGI_APPLICATION = 'djangoreact.wsgi.application'
 
@@ -92,26 +92,13 @@ WSGI_APPLICATION = 'djangoreact.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': 'django_movie',
-#         'USER': 'taeseop',
-#         'PASSWORD': '201620896',
-#         'HOST': 'localhost',
-#         'PORT': '3306',
-#         'OPTIONS': {
-#             'init_command': 'SET sql_mode="STRICT_TRANS_TABLES"'
-#         }
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
+
 DATABASES = my_setting.DATABASES
 
 # Password validation

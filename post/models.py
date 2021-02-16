@@ -10,4 +10,4 @@ class MovieDb(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'api_movie'
+        db_table = 'movie'
