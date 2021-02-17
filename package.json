@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "http-middleware": "^1.0.5"
+  }
+}

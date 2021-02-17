@@ -1,0 +1,29 @@
+{
+  "name": "is-incoming-message",
+  "version": "1.0.0",
+  "description": "Check if value is an incoming message (`req`)",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && NODE_ENV=test node test",
+    "test-cov": "standard && NODE_ENV=test istanbul cover test.js"
+  },
+  "repository": "yoshuawuyts/is-incoming-message",
+  "keywords": [
+    "req",
+    "server",
+    "http"
+  ],
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "istanbul": "^0.3.17",
+    "nets": "^3.1.0",
+    "standard": "^5.0.2",
+    "tape": "^4.0.3"
+  },
+  "files": [
+    "LICENSE",
+    "index.js",
+    "README.md"
+  ]
+}

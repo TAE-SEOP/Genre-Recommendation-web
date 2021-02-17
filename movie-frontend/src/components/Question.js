@@ -14,7 +14,7 @@ class Question extends React.Component{
     constructor(props){
         super(props);
         this.onChange = this.onChange.bind(this);
-        this.state = {
+        this.state = { 
             userAnswer : [
                 {'id' : 1, 'result' : 0 },{'id' : 2, 'result' : 0 },
                 {'id' : 3, 'result' : 0 },{'id' : 4, 'result' : 0 },

@@ -14,14 +14,15 @@ class Result extends React.Component {
       };
 }
 
-async componentDidMount() {
+async componentDidMount() { 
   try{
-    const res= await fetch("http://127.0.0.1:8000/api/movie/map_main");
+    const res= await fetch("api/movie/map_main");
     const posts = await res.json();
     this.setState({
       posts
     });
-  } catch(e){
+  } 
+  catch(e){
       console.log(e);
   }
 }
@@ -77,39 +78,6 @@ async componentDidMount() {
   
             }
         
-    // if(!posts[0]){
-    //     return(
-    //       <div>still waiting</div>
-    //     );
-    //   }
-
-    // else{
-    //   return(
-    //     <div className="result">
-    //       <div className="recommendG">
-    //         <h3 style={{fontSize:"20px"}}>
-    //           <strong>오늘은 {posts[0].genre} 장르를 추천합니다.</strong>
-    //         </h3>
-          
-    //         <img src="/images/hear.jpg" class="img_heart"></img>
-          
-            
-    //       </div>
-    //       <div className="recommendM">
-    //         <h3 style={{fontSize:"20px"}}>
-    //             <strong>이런 영화는 어떠세요?</strong>
-    //         </h3>
-    //         {recommendMovie}
-    //       </div>
-    //       <NavLink to ={{
-    //               pathname: "/"
-    //           }}>
-    //         <Button style={{width:"200px",marginTop:"50px"}} variant="outline-danger">다시 하기</Button>
-    //       </NavLink> 
-
-    //     </div>
-    //   );
-    // }
   }
 }
 

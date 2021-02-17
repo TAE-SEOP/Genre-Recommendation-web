@@ -19,7 +19,7 @@ def main():
         if sys.argv[2] == 'react':
             project_root = os.getcwd()
             os.chdir(os.path.join(project_root, "movie-frontend"))
-            os.system("npm run build")
+            os.system("yarn start")
             os.chdir(project_root)
             sys.argv.pop(2)
     except IndexError:
