@@ -71,7 +71,7 @@ class Question extends React.Component{
             <Route exact path="/SecondQuestion" render={()=><SecondQuestion firstAns = {this.state.userAnswer[0].result} secondAns={this.state.userAnswer[1].result} onChange ={this.onChange}/> }/>
             <Route exact path="/ThirdQuestion" render={()=><ThirdQuestion thirdAns={this.state.userAnswer[2].result} onChange={this.onChange}/>} /> */}
             <Route exact path='/' render={()=> <Home/>}/>
-            <Route exact path='/Result' render={()=> <Result/>}/>
+            <Route exact path='/Result' render={()=> <Result userAnswer = {this.state.userAnswer} />}/>
             <Route exact path='/Question' render={()=> <QuestionPage  questionArray = {this.state.questionArray[0]} answer = {this.state.userAnswer[0].result} choiceList = {this.state.selectList[0].choice} onChange = {this.onChange}/>}/>
             <Route exact path='/Question-2' render={()=> <QuestionPage questionArray = {this.state.questionArray[1]} firstAns = {this.state.userAnswer[0].result} answer={this.state.userAnswer[1].result} onChange = {this.onChange}/>}/>
             <Route exact path='/Question-3' render={()=> <QuestionPage questionArray = {this.state.questionArray[2]} answer = {this.state.userAnswer[2].result} choiceList = {this.state.selectList[1].choice} onChange = {this.onChange}/>}/>

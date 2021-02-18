@@ -17,9 +17,11 @@ class QuestionPage extends React.Component{
         
     }
     onChangeAns = (e)=>{
+        
         this.setState({answer:e.target.value})
         console.log("questionarray id :", this.props.questionArray.id);
         this.props.onChange(e.target.value,this.props.questionArray.id);
+
     } 
 
 
@@ -65,7 +67,7 @@ class QuestionPage extends React.Component{
             const buttonStyle={
                 width:400,
                 height:100,
-                margin:20, 
+                margin:10, 
                 fontSize:15,
                 borderRadius: 20
             }
@@ -76,17 +78,17 @@ class QuestionPage extends React.Component{
                     {
                         this.props.questionArray.id !== 2 &&
                         <Link to= {this.state.nextpage[this.props.questionArray.id]}>
-                            <Radio.Group>
-                                {this.props.choiceList.map((m,index)=>(<div><Button variant ="outline-danger" style={buttonStyle} onClick={this.onChangeAns}  value = {index+1}  key ={index}> {m} </Button></div>))}
-                            </Radio.Group>
+                            
+                                {this.props.choiceList.map((m,index)=>(<h2><Button variant ="outline-danger" style={buttonStyle} onClick={this.onChangeAns}  value = {index+1}  key ={index}> {m} </Button></h2>))}
+                            
                         </Link>
                     } 
                     {
                         this.props.questionArray.id == 2 &&
                         <Link to= {this.state.nextpage[this.props.questionArray.id]}>
-                            <Radio.Group>
-                                {sliceemotion.map((m,index)=>(<div><Button variant ="outline-danger" style={buttonStyle} value={m.id} onClick={this.onChangeAns} key ={index}> {m.emotion} </Button></div>))}
-                            </Radio.Group>
+                            
+                                {sliceemotion.map((m,index)=>(<h2><Button variant ="outline-danger" style={buttonStyle} value={m.id} onClick={this.onChangeAns} key ={index}> {m.emotion} </Button></h2>))}
+                            
                         </Link>
                     }      
                       
